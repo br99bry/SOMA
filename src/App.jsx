@@ -1,8 +1,19 @@
 import React from 'react'
-
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './components/pages/Home';
 const App = () => {
   return (
-    <p>hello world</p>
+    <BrowserRouter>
+      <Switch>
+        <Route 
+          exact
+          path='/'
+          render={ () => (
+            <Home />
+          ) }
+        />
+      </Switch>
+    </BrowserRouter>
   )
 }
 
